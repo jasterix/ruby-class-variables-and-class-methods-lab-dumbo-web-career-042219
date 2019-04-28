@@ -39,30 +39,30 @@ class Song
     @@artists.uniq
   end
   
-  # def self.genre_count
-  #   genre_count = {}
-  #   @@genres.each do |genre|
-  #     if genre_count[genre] 
-  #       genre_count[genre] +=1
-  #         # binding.pry
-  #     else
-  #       genre_count[genre] = 1
-  #     end
-  #     genre_count
-  #   end
-  # end
-  
-    def self.genre_count
-    genre_count_hash={}
+  def self.genre_count
+    genre_count = {}
     @@genres.each do |genre|
-      if genre_count_hash[genre]
-        genre_count_hash[genre] += 1
+      if genre_count[genre] 
+        genre_count[genre] +=1
+          # binding.pry
       else
-        genre_count_hash[genre] = 1
+        genre_count[genre] = 1
       end
+      genre_count
     end
-    genre_count_hash
   end
+  
+  #   def self.genre_count
+  #   genre_count_hash={}
+  #   @@genres.each do |genre|
+  #     if genre_count_hash[genre]
+  #       genre_count_hash[genre] += 1
+  #     else
+  #       genre_count_hash[genre] = 1
+  #     end
+  #   end
+  #   genre_count_hash
+  # end
   
   def self.artist_count
     artist_count = {}
